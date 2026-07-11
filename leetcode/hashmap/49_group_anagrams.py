@@ -9,6 +9,6 @@ class Solution:
             if key in hashmap:
                 hashmap[key].append(word)
               else:
-                hashmap[key]=word
+                hashmap[key]=[word]
               return list(hashmap.values())
               
