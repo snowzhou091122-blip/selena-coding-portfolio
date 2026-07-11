@@ -8,7 +8,7 @@ class Solution:
             key = "".join(sorted(word))
             if key in hashmap:
                 hashmap[key].append(word)
-              else:
-                hashmap[key]=[word]
-              return list(hashmap.values())
-              
+            else:
+                hashmap[key] = [word]
+
+        return list(hashmap.values())
