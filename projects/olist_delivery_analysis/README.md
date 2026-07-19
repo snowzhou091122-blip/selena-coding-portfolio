@@ -2,7 +2,12 @@
 
 ## Project Status
 
-Project framing in progress. Data has not been downloaded or analyzed yet.
+Project framing, raw-data download, and the first data dictionary are complete. Analysis has not started yet.
+
+- [Data dictionary](docs/data_dictionary.md)
+- [Beginner guide in Chinese](docs/START_HERE_CN.md)
+- [Raw-data source and download note](data/raw/README.md)
+- [Raw-data profiling script](scripts/profile_raw_data.py)
 
 ## Audience
 
@@ -30,22 +35,26 @@ This project will identify patterns that can help an e-commerce operations team 
 
 ## Planned Workflow
 
-1. Download and document the public Olist dataset.
-2. Identify the tables and columns needed for orders, items, products, sellers, customers, and reviews.
+1. Download and document the public Olist dataset. **Complete**
+2. Identify the tables and columns needed for orders, items, products, sellers, customers, and reviews. **Complete**
 3. Clean dates, missing values, duplicate records, and inconsistent categories.
 4. Build analysis-ready tables with SQL and Python/pandas.
 5. Perform exploratory analysis and create decision-focused visualizations.
 6. Summarize findings, limitations, and recommended next steps.
 
-## Planned Repository Structure
+## Repository Structure
 
 ```text
 olist_delivery_analysis/
-|-- README.md
-|-- data/
-|-- notebooks/
-|-- sql/
-`-- figures/
+├── README.md
+├── data/
+│   ├── raw/           # local source CSVs; ignored by Git
+│   └── processed/     # future analysis-ready data
+├── docs/
+│   ├── START_HERE_CN.md
+│   └── data_dictionary.md
+└── scripts/
+    └── profile_raw_data.py
 ```
 
-Large raw data files will be excluded from GitHub and linked to their public source instead.
+The data contains no private user information. Large raw files are excluded from Git and linked to their public source instead.

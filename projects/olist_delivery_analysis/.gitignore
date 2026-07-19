@@ -1,0 +1,7 @@
+data/raw/*.csv
+data/processed/*
+!data/processed/.gitkeep
+.DS_Store
+__pycache__/
+*.pyc
+
