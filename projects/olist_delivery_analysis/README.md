@@ -8,6 +8,15 @@ Project framing, raw-data download, and the first data dictionary are complete. 
 - [Beginner guide in Chinese](docs/START_HERE_CN.md)
 - [Raw-data source and download note](data/raw/README.md)
 - [Raw-data profiling script](scripts/profile_raw_data.py)
+- [Pandas data-inspection notebook](notebooks/01_data_inspection.ipynb)
+
+## Data Source
+
+The data comes from Olist's public Brazilian e-commerce dataset in the official
+[work-at-olist-data repository](https://github.com/olist/work-at-olist-data/tree/master/datasets).
+The original CSV files are kept locally in `data/raw/` and excluded from Git
+because they are large. The source link and download date are documented in
+[`data/raw/README.md`](data/raw/README.md).
 
 ## Audience
 
@@ -50,10 +59,15 @@ olist_delivery_analysis/
 ├── data/
 │   ├── raw/           # local source CSVs; ignored by Git
 │   └── processed/     # future analysis-ready data
+├── figures/           # charts for the final analysis
+├── notebooks/
+│   └── 01_data_inspection.ipynb
+├── src/               # reusable cleaning and metric functions
 ├── docs/
 │   ├── START_HERE_CN.md
 │   └── data_dictionary.md
 └── scripts/
+    ├── inspect_orders_with_pandas.py
     └── profile_raw_data.py
 ```
 
