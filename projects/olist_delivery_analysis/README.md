@@ -2,13 +2,16 @@
 
 ## Project Status
 
-Project framing, raw-data download, and the first data dictionary are complete. Analysis has not started yet.
+Project framing, raw-data download, the data dictionary, first-pass orders cleaning, and the order-grain core-table merge are complete. Broader analysis has not started yet.
 
 - [Data dictionary](docs/data_dictionary.md)
 - [Beginner guide in Chinese](docs/START_HERE_CN.md)
 - [Raw-data source and download note](data/raw/README.md)
 - [Raw-data profiling script](scripts/profile_raw_data.py)
 - [Pandas data-inspection notebook](notebooks/01_data_inspection.ipynb)
+- [Orders cleaning notebook](notebooks/02_orders_cleaning.ipynb)
+- [Reusable orders cleaning script](src/clean_orders.py)
+- [Core-table merge script](scripts/merge_core_tables.py)
 
 ## Data Source
 
@@ -46,8 +49,8 @@ This project will identify patterns that can help an e-commerce operations team 
 
 1. Download and document the public Olist dataset. **Complete**
 2. Identify the tables and columns needed for orders, items, products, sellers, customers, and reviews. **Complete**
-3. Clean dates, missing values, duplicate records, and inconsistent categories.
-4. Build analysis-ready tables with SQL and Python/pandas.
+3. Clean dates, missing values, duplicate records, and inconsistent categories. **Orders first pass complete; reviews and payments aggregated to order grain**
+4. Build analysis-ready tables with SQL and Python/pandas. **Order + customer + review + payment table complete**
 5. Perform exploratory analysis and create decision-focused visualizations.
 6. Summarize findings, limitations, and recommended next steps.
 
@@ -61,8 +64,11 @@ olist_delivery_analysis/
 │   └── processed/     # future analysis-ready data
 ├── figures/           # charts for the final analysis
 ├── notebooks/
-│   └── 01_data_inspection.ipynb
+│   ├── 01_data_inspection.ipynb
+│   └── 02_orders_cleaning.ipynb
 ├── src/               # reusable cleaning and metric functions
+│   ├── README.md
+│   └── clean_orders.py
 ├── docs/
 │   ├── START_HERE_CN.md
 │   └── data_dictionary.md
